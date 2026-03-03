@@ -1,3 +1,18 @@
+const createElements = (arr) => {
+    const htmlelements = arr.map(el => `<span class ="btn"> ${el}</span>`);
+    return htmlelements.join(" ");
+}
+
+const manageSpiner = (status) => {
+    if(status == true){
+        document.getElementById("spener").classList.remove("hidden");
+        document.getElementById("word-container").classList.add("hidden");
+    }else{
+        document.getElementById("spener").classList.add("hidden");
+        document.getElementById("word-container").classList.remove("hidden");
+    }
+}
+
 loadLessions = () => {
     fetch("https://openapi.programming-hero.com/api/levels/all")
         .then((res) => res.json())
@@ -5,11 +20,14 @@ loadLessions = () => {
             displayLeassons(data.data);
         })
 }
+
 const removeActive = () => {
     const lessionButtons = document.querySelectorAll(".lesson-btn");
     lessionButtons.forEach(btn => btn.classList.remove("active"));
 }
+
 const loadLevelWord = (id) => {
+    manageSpiner(true);
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
         .then(res => res.json())
@@ -28,21 +46,7 @@ const loadWordDetail = async (id) => {
     const details = await res.json();
     displayWordDetails(details.data);
 }
-// {
-//     "word": "Eager",
-//     "meaning": "আগ্রহী",
-//     "pronunciation": "ইগার",
-//     "level": 1,
-//     "sentence": "The kids were eager to open their gifts.",
-//     "points": 1,
-//     "partsOfSpeech": "adjective",
-//     "synonyms": [
-//         "enthusiastic",
-//         "excited",
-//         "keen"
-//     ],
-//     "id": 5
-// }
+
 const displayWordDetails = (word) => {
     const detailsBox = document.getElementById("details-container");
     detailsBox.innerHTML = `
@@ -59,14 +63,13 @@ const displayWordDetails = (word) => {
                 </div>
                 <div class="">
                     <h2 class=" font-bold">সমার্থক শব্দ গুলো</h2>
-                    <span class="btn">Enthusiastic</span>
-                    <span class="btn">Enthusiastic</span>
-                    <span class="btn">Enthusiastic</span>
+                    <div class="">${createElements(word.synonyms)}</div>
                 </div>
     `;
     document.getElementById("word_modal").showModal();
-    console.log(word);
+    // console.log(word);
 }
+
 const displayLavelWord = (words) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
@@ -78,6 +81,7 @@ const displayLavelWord = (words) => {
             <h2 class="font-bold text-4xl">নেক্সট Lesson এ যান</h2>
         </div>
         `;
+        manageSpiner(false);
         return;
     }
     words.forEach(word => {
@@ -94,9 +98,10 @@ const displayLavelWord = (words) => {
         </div>
         `;
         wordContainer.append(card);
-        // console.log(word)
     });
+    manageSpiner(false);
 }
+
 const displayLeassons = (lessons) => {
     const lavelContainer = document.getElementById("lavel-container");
     lavelContainer.innerHTML = "";
@@ -112,4 +117,5 @@ const displayLeassons = (lessons) => {
     }
 
 }
+
 loadLessions()
