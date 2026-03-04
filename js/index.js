@@ -118,4 +118,19 @@ const displayLeassons = (lessons) => {
 
 }
 
-loadLessions()
+loadLessions();
+
+document.getElementById("btnSearch").addEventListener("click", ()=> {
+    removeActive();
+    const inputSearch = document.getElementById("inputSearch");
+    const serchValue = inputSearch.value.trim().toLowerCase();
+    console.log(serchValue);
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+    .then((res) => res.json())
+    .then((data)=> {
+        const allWords = data.data;
+        const felterWords = allWords.filter(word => word.word.toLowerCase().includes(serchValue));
+        displayLavelWord(felterWords);
+    })
+});
