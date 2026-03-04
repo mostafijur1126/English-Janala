@@ -74,20 +74,42 @@
             </div>
     </header>
 
-    <section class=" flex flex-col-reverse md:flex-row gap-10 justify-between items-center py-5 w-11/12 mx-auto">
-        <div class="text-center md:text-left content flex-1">
-            <h2 class="text-4xl font-bold mb-8"><span class="text-sky-400">English</span> is Easy!!</h2>
-            <p class="font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
-                চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-            <form class="space-y-3 py-5" action="">
-                <input class="border-gray-400 p-2 rounded" type="text" name="" id="" placeholder="Enter Your Name"> <br>
-                <input class="border-gray-400 p-2 rounded" type="password" name="" id=""
-                    placeholder="Enter Your Password">
-            </form>
-            <button class="btn btn-primary">Get Started</button>
-        </div>
-        <div class="image flex-1">
-            <img src="./assets/hero-student.png" alt="">
+    <section class="w-11/12 mx-auto py-10">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-10">
+
+            <!-- Content -->
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    <span class="text-sky-400">English</span> is Easy!!
+                </h2>
+
+                <p class="font-bangla text-sm sm:text-base text-gray-600 mb-6">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                    আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+
+                <form class="space-y-4 max-w-md mx-auto md:mx-0">
+                    <input
+                        class="w-full border border-gray-300 focus:ring-2 focus:ring-sky-400 outline-none p-3 rounded-lg"
+                        type="text" placeholder="Enter Your Name" />
+
+                    <input
+                        class="w-full border border-gray-300 focus:ring-2 focus:ring-sky-400 outline-none p-3 rounded-lg"
+                        type="password" placeholder="Enter Your Password" />
+
+                    <button type="submit"
+                        class="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                        Get Started
+                    </button>
+                </form>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1 w-full flex justify-center">
+                <img class="w-3/4 sm:w-2/3 md:w-full max-w-md h-auto object-contain" src="./assets/me-png.png"
+                    alt="Hero Image" />
+            </div>
+
         </div>
     </section>
 
@@ -98,7 +120,7 @@
         <div id="lavel-container" class="flex gap-5 flex-wrap justify-center"></div>
     </section>
 
-    <section class="flex justify-center mt-10">
+    <section class="flex justify-center mt-10 px-5">
         <label class="input pr-0">
             <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
@@ -151,26 +173,132 @@
         </div>
     </dialog>
 
-    <footer class="footer sm:footer-horizontal bg-[#EDF6FF] p-10 flex justify-between items-center">
-        <section class="w-11/12 mx-auto flex justify-between items-center"  >
-            <div>
-                <a href="" class="flex items-center gap-1">
+    <section class="w-11/12 mx-auto mb-10">
+        <h2 class="text-center text-4xl font-bold mb-8"><span class="text-sky-400">Frequently</span> Asked Questions
+        </h2>
+        <div class="max-w-full mx-auto divide-y divide-gray-200 space-y-5">
+            <details class="py-8 bg-gray-100 rounded p-5">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                    1. How can I start learning English on this website?
+                    <!-- Optional: Add an icon that rotates with CSS or Tailwind variants (e.g., group-open:) -->
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-500">
+                    You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer
+                    structured courses to guide you step by step.
+                </p>
+            </details>
+
+            <!-- Add more <details> blocks for additional FAQs -->
+            <details class="py-8 bg-gray-100 rounded p-5">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                    2. Is this website free to use?
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-500">
+                    We accept various payment methods, including credit cards, debit cards, net banking, and mobile
+                    wallet payments.
+                </p>
+            </details>
+            <details class="py-8 bg-gray-100 rounded p-5">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                    3. Do I need to create an account?
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-500">
+                    We accept various payment methods, including credit cards, debit cards, net banking, and mobile
+                    wallet payments.
+                </p>
+            </details>
+            <details class="py-8 bg-gray-100 rounded p-5">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                    4. How can I build my English vocabulary?
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-500">
+                    We accept various payment methods, including credit cards, debit cards, net banking, and mobile
+                    wallet payments.
+                </p>
+            </details>
+            <details class="py-8 bg-gray-100 rounded p-5">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                    5. Do you offer certificates for completed courses?
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-500">
+                    We accept various payment methods, including credit cards, debit cards, net banking, and mobile
+                    wallet payments.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="bg-[#EDF6FF] py-10">
+        <section class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+
+            <!-- Left Side -->
+            <div class="text-center md:text-left space-y-3">
+
+                <a href="#" class="flex justify-center md:justify-start items-center gap-2">
                     <span class="text-lg font-bold">English</span>
-                    <img src="/assets/logo.png" alt="">
+                    <img class="w-6 h-6" src="/assets/logo.png" alt="Logo">
                     <span class="font-bangla text-lg font-semibold">জানালা</span>
                 </a>
-                <h2 class="font-bangla text-2xl">ইংরেজি শিখুন সহজে</h2>
-                <p class="font-light">Providing ED-Tech Applications since 2025 </p>
+
+                <h2 class="font-bangla text-xl sm:text-2xl font-semibold">
+                    ইংরেজি শিখুন সহজে
+                </h2>
+
+                <p class="text-sm sm:text-base text-gray-600">
+                    Providing ED-Tech Applications since 2025
+                </p>
             </div>
-            <div>
-                <h4>Follow us</h4>
-                <div>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
+
+            <!-- Right Side -->
+            <div class="text-center md:text-right space-y-3">
+                <h4 class="font-semibold text-lg">Follow us</h4>
+
+                <div class="flex justify-center md:justify-end gap-5 text-xl">
+                    <a href="#" class="hover:text-blue-600 transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" class="hover:text-red-600 transition">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#" class="hover:text-pink-500 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-gray-800 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
             </div>
+
         </section>
     </footer>
 
