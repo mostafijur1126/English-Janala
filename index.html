@@ -25,7 +25,7 @@
 
 <body>
 
-    <header>
+    <header class="w-11/12 mx-auto">
         <div class="navbar bg-base-100 shadow-sm">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -91,10 +91,10 @@
         </div>
     </section>
 
-    
+
     <section>
         <h2 class="text-4xl font-bold mb-8 text-center"><span class="text-sky-400">Let's</span> Learn Vocabularies</h2>
-        
+
         <div id="lavel-container" class="flex gap-5 flex-wrap justify-center"></div>
     </section>
 
@@ -110,16 +110,28 @@
             <button id="btnSearch" class="btn btn-primary">Search</button>
         </label>
     </section>
-    
+
     <section id="spener" class="flex justify-center items-center py-10 hidden">
         <span class="loading loading-bars loading-xl"></span>
     </section>
 
-    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5 ">
+    <section id="word-container" class="bg-gray-100 px-4 sm:px-6 lg:px-10 py-8 sm:py-10 
+         w-full sm:w-11/12 mx-auto my-6 sm:my-10 
+         grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
-        <div class="text-center bg-sky-100 col-span-full rounded-xl py-10 space-y-6 font-bangla">
-            <p class="text-xl font-medium text-gray-400">আপনি এখনো কোন Lesson Select করেন ন</p>
-            <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
+        <div class="text-center bg-sky-100 col-span-full 
+              rounded-xl py-8 sm:py-10 px-4 
+              space-y-4 sm:space-y-6 font-bangla">
+
+            <p class="text-base sm:text-lg md:text-xl 
+              font-medium text-gray-500">
+                আপনি এখনো কোন Lesson Select করেন ন
+            </p>
+
+            <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl">
+                একটি Lesson Select করুন।
+            </h2>
+
         </div>
     </section>
 
@@ -138,6 +150,29 @@
             </div>
         </div>
     </dialog>
+
+    <footer class="footer sm:footer-horizontal bg-[#EDF6FF] p-10 flex justify-between items-center">
+        <section class="w-11/12 mx-auto flex justify-between items-center"  >
+            <div>
+                <a href="" class="flex items-center gap-1">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="/assets/logo.png" alt="">
+                    <span class="font-bangla text-lg font-semibold">জানালা</span>
+                </a>
+                <h2 class="font-bangla text-2xl">ইংরেজি শিখুন সহজে</h2>
+                <p class="font-light">Providing ED-Tech Applications since 2025 </p>
+            </div>
+            <div>
+                <h4>Follow us</h4>
+                <div>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
 
     <script src="js/index.js"></script>
 </body>
